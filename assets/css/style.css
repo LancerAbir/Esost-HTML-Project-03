@@ -1,0 +1,911 @@
+/********************
+    Base CSS 
+*********************/
+@font-face {
+    font-family: 'RubikMedium';
+    src: url('../fonts/RubikMedium/fonts/RubikMedium.eot');
+    src: url('../fonts/RubikMedium/fonts/RubikRegular.eot') format('embedded-opentype'),
+         url('../fonts/RubikMedium/fonts/RubikMedium.woff2') format('woff2'),
+         url('../fonts/RubikMedium/fonts/RubikMedium.woff') format('woff'),
+         url('../fonts/RubikMedium/fonts/RubikMedium.ttf') format('truetype'),
+         url('../fonts/RubikMedium/fonts/RubikMedium.svg#RubikRegular') format('svg');
+}
+@font-face {
+    font-family: 'RubikRegular';
+    src: url('../fonts/RubikRegular/fonts/RubikRegular.eot');
+    src: url('../fonts/RubikRegular/fonts/RubikRegular.eot') format('embedded-opentype'),
+         url('../fonts/RubikRegular/fonts/RubikRegular.woff2') format('woff2'),
+         url('../fonts/RubikRegular/fonts/RubikRegular.woff') format('woff'),
+         url('../fonts/RubikRegular/fonts/RubikRegular.ttf') format('truetype'),
+         url('../fonts/RubikRegular/fonts/RubikRegular.svg#RubikRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'CambriaBold';
+    src: url('../fonts/cambriaBold/Cambria-Bold.eot') format('embedded-opentype');
+    src: url('../fonts/cambriaBold/Cambria-Bold.svg') format('embedded-opentype');
+    src: url('../fonts/cambriaBold/Cambria-Bold.ttf') format('embedded-opentype');
+    src: url('../fonts/cambriaBold/Cambria-Bold.woff') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'CambriaRegular';
+    src: url('../fonts/cambriaRegular/fonts/Cambria.eot');
+    src: url('../fonts/cambriaRegular/fonts/Cambria.eot') format('embedded-opentype'),
+         url('../fonts/cambriaRegular/fonts/Cambria.woff2') format('woff2'),
+         url('../fonts/cambriaRegular/fonts/Cambria.woff') format('woff'),
+         url('../fonts/cambriaRegular/fonts/Cambria.ttf') format('truetype'),
+         url('../fonts/cambriaRegular/fonts/Cambria.svg#CambriaRegular') format('svg');
+}
+
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], textarea {
+    border: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+input[type="submit"], button[type="submit"] {
+    border: medium none;
+    color: #fff;
+    margin: 0;
+    padding: 15px 30px;
+    width: auto;
+}
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: 0 solid
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+body {
+    font-weight: 400;
+    font-family: 'RubikRegular';
+    margin: 0; 
+    padding: 0;
+    color: #858585;
+    font-size: 1.172vw;  /* 16 px */
+    line-height: 1.8;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+/********************
+    Define CSS
+*********************/
+.wrapper {
+    max-width: 1170px;
+}
+
+/********************
+    Header Section
+*********************/
+.grenadian-bg {
+    background: linear-gradient(270deg, #5946d3, #458fc8, #166cad);
+    background-size: 150% 150%;
+
+    -webkit-animation: grenadian-bg 3s ease infinite;
+    -moz-animation: grenadian-bg 3s ease infinite;
+    animation: grenadian-bg 3s ease infinite;
+}
+
+
+@-webkit-keyframes grenadian-bg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes grenadian-bg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes grenadian-bg { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.header-top {
+    font-size: 1.125em;
+    color: #fff;
+    padding: 26px 0;
+}
+
+.contact-number {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.contact-number i.fa {
+    margin-right: 14px;
+    color: #297ab8;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 18px;
+    padding: 5px 6px;
+}
+
+.header-top a {
+    color: #fff;
+}
+.social-icon a i.fa {
+    margin-left: 18px;
+    transition: .3s;
+}
+.social-icon a i.fa:hover {
+    color: #9999;
+}
+.logo img {
+    max-width: 100%;
+}
+.logo {
+    padding: 29px 0;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-menu li {
+    display: inline-block;
+    color: #3e3e3e;
+    margin-left: 28.5px;
+}
+.main-menu li a {
+    color: #3e3e3e;
+    font-size: 1.125em;
+    font-family: 'CambriaRegular';
+    padding: 50px 0;
+    display: flex;
+    transition: .3s;
+}
+.main-menu li a.active {
+    color: #003471;
+    font-weight: 700;
+}
+.main-menu li a:hover {
+    color: #003471;
+    font-weight: 700;
+}
+/********************
+    Banner Area
+*********************/
+.banner-bg {
+    position: absolute;
+    background: url(../img/wav02.png);
+    background-repeat: repeat-x;
+    left: 0;
+    bottom: -18px;
+    width: 100%;
+    height: 180px;
+    background-position: bottom;
+    animation: wave-one 10s linear infinite;
+    opacity: .6;
+}
+
+@keyframes wave-one {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+.banner-bg::before {
+    position: absolute;
+    background: url(../img/wave.png);
+    background-repeat: repeat-x;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    content: "";
+    background-position: bottom;
+    animation: wave-two 10s linear infinite;
+    opacity: .6;
+}
+@keyframes wave-two {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+section.banner {
+    position: relative;
+    z-index: 9;
+    background: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    contain: "";
+    height: 800px;
+}
+section.banner img {
+    width: 100%;
+    max-height: 800px;
+}
+.banner-content {
+    position: absolute;
+    max-width: 955px;
+    bottom: 60px;
+    left: 14%;
+    right: -50%;
+}
+
+.banner-text h2 {
+    font-size: 2.250em;
+    text-transform: uppercase;
+    color: #0054a3;
+    font-family: 'RubikMedium';
+    margin-bottom: 0px;
+}
+
+.banner-text p {
+    font-size: 1.250em;
+    color: #393939;
+    margin-bottom: 0;
+}
+.approved-btn a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.250em;
+    font-family: 'CambriaBold';
+    padding: 16px 38px;
+    border-radius: 40px;
+    transition: .3s;
+    border: 2px solid #5a61ec;
+}
+.approved-btn a:hover {
+    background-color: #fff;
+    color: #5a61ec;
+    border: 2px solid;
+}
+.approved-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.banner-content .approved-btn.grenadian-bg {
+    border-radius: 50px;
+}
+/********************
+    Offer Area
+*********************/
+.offer-content {padding: 94px 0;}
+
+.offer-content h3 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    color: #5a5a5a;
+    font-family: 'CambriaBold';
+    font-size: 1.750em;
+    line-height: 1.5;
+}
+
+.offer-icon {
+    background-color: #f7f9fb;
+}
+.section-title {
+    margin: 0 auto;
+    width: 560px;
+    padding: 96px 0;
+}
+.section-title h3 {
+    font-size: 2.000em;
+    color: #5a5a5a;
+    font-family: 'CambriaBold';
+}
+.single-offer {
+    margin-bottom: 85px;
+    font-size: 1.063em;
+}
+.single-offer img {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    width: 20%;
+    top: 0;
+    margin-bottom: 150px;
+}
+.single-offer h4 {
+    font-size: 1.375em;
+    font-family: 'RubikMedium';
+    color: #646464;
+}
+/********************
+    Call To Action
+*********************/
+.c2a-bg-one {
+    background-image: url(../img/paralax-1.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+section.call-to-action {
+    padding: 70px 0;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+section.call-to-action::after {
+    position: absolute;
+    background-image: url(../img/paralax-1.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+
+}
+
+section.call-to-action a {
+    color: #fff;
+}
+
+section.call-to-action h3 {
+    font-size: 1.875em;
+    font-family: 'CambriaBold';
+}
+
+.c2a-content {
+    width: 85%;
+}
+
+.c2a-content p {
+    font-size: 1.063em;
+    color: #d7d7d7;
+}
+
+a.c2a-btn {
+    font-size: 1.250em;
+    text-transform: uppercase;
+    font-family: 'CambriaBold';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: .3s;
+    margin-top: -26px;
+}
+
+a.c2a-btn:hover {
+    background-color: #fff;
+    color: #4c4ec0;
+}
+
+
+/********************
+    Travel Area
+*********************/
+.big-text p {
+    color: #5a5a5a;
+    font-family: 'CambriaBold';
+    font-size: 1.375em;
+    text-align: center;
+}
+.big-text {
+    padding-top: 98px;
+    padding-bottom: 44px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+.single-travel a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 0.904em;
+    transition: .3s;
+}
+.single-travel a:hover {
+    color: #999;
+}
+
+.single-travel img {
+    width: 150px;
+    height: 90px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 5px;
+    transition: .3s;
+}
+.single-travel img:hover {
+    height: 98px;
+    width: 180px;
+}
+.single-travel {
+    width: 100%;
+    box-shadow: 4px -12px 13px #999;
+    height: 184px;
+}
+section.travel {
+    padding-bottom: 125px;
+}
+
+/********************
+    Trailer Section Area
+*********************/
+section.trailer-area {
+    position: relative;
+    background-color: #f7f9fb;
+}
+
+.author.text-right img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 50%;
+}
+
+.trailer-qute-text p {
+    color: #6b6b6b;
+    font-size: 1.125em;
+    font-family: 'CambriaRegular';
+}
+
+.trailer-qute-text {
+    width: 123%;
+    margin: 100px 0;
+}
+
+.trailer-qute-text h4 {
+    color: #003471;
+    font-size: 1.375em;
+    font-family: 'CambriaBold';
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+section.travel {
+    padding-bottom: 125px;
+}
+
+.trailer-top {
+    width: 90%;
+    margin: 0 auto;
+}
+.trailer-bottom {
+    position: relative;
+    padding-top: 9%;
+    padding-bottom: 10.8%;
+}
+
+.trailer-bottom-car img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.trailer-bottom-text h3 {
+    color: #5a5a5a;
+    font-size: 1.750em;
+    font-family: 'CambriaBold';
+}
+
+.trailer-bottom-text p {
+    margin-top: 43px;
+}
+/********************
+    Call To Action 2nd
+*********************/
+.call-to-action.2nd .c2a-content{
+    width: 95%;
+}
+section.apply-area .section-title {
+    padding-top: 86px;
+    padding-bottom: 74px;
+    width: 88%;
+}
+section.apply-area .section-title p {
+    text-align: left;
+    margin-top: 68px;
+}
+/********************
+    Apply Area
+*********************/
+.apply-box {
+    background-color: #f2f5f8;
+    padding: 40px 39px;
+    max-width: 100%;
+    max-height: 164px;
+    padding-left: 71px;
+    margin-bottom: 77px;
+}
+.apply-box h4 {
+    color: #5a5a5a;
+    font-size: 1.250em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.apply-box a {
+    color: #858585;
+    padding: -7px;
+}
+.apply-attention {
+    background-color: #fbfcfd;
+    padding: 70px 0;
+}
+.apply-attention h3 {
+    color: #5a5a5a;
+    font-size: 1.500em;
+    font-family: 'CambriaBold';
+}
+.apply-attention p {
+    margin-top: 40px;
+}
+.our-roll {
+    padding-top: 90px;
+    padding-bottom: 170px;
+    position: relative;
+}
+.our-roll h3 {
+    color: #5a5a5a;
+    font-size: 1.500em;
+    font-family: 'CambriaBold';
+}
+.our-roll p{
+    margin-top: 40px;
+}
+.roll-car img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/********************
+    Call To Action 3rd
+*********************/
+section.call-to-action.c2a-3rd .c2a-content {
+    padding: 30px 0;
+}
+.rook ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rook ul li {
+    margin-bottom: 10px;
+}
+
+.rook ul li a {
+    font-size: 1.375em;
+    font-family: 'CambriaRegular';
+    transition: .3s;
+}
+.rook ul li a:hover {
+    color: #999;
+}
+.rook ul li a img {
+    position: absolute;
+    left: -25px;
+    margin-top: 11px;
+}
+/********************
+    Sponson Area
+*********************/
+section.sponsor-area {
+    padding: 96px 0;
+}
+.sponsor-logo {
+    display: flex;
+    align-items: center;
+}
+
+.sponsor-logo img {
+    margin-right: 95px;
+    height: 5%;
+    min-width: 9%;
+}
+/********************
+    Contact Area
+*********************/
+section.contact-area {
+    padding-top: 80px;
+    padding-bottom: 67px;
+    position: relative;
+}
+
+section.contact-area h4 {
+    font-size: 1.250em;
+    color: #fff;
+    font-weight: 500;
+}
+section.contact-area a {
+    font-size: 1.07em;
+    margin-top: -4px;
+    display: block;
+    color: #fff;
+}
+.right-side h4 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/********************
+    Footer Area
+*********************/
+.copy-write {
+    padding: 32px 0;
+    font-size: 1.125em;
+    color: #999999;
+}
+
+footer.footer {
+    background-color: #1d1d1d;
+}
+
+
+/********************
+    Responsive 
+*********************/
+
+/* Large Screen -  col-lg */
+@media only screen and (min-width: 1200px) {
+}
+
+/* Desktop  Screen - col-md */
+@media only screen and (min-width: 992px) and ( max-width: 1199px ) {
+
+    a.c2a-btn {
+        margin-right: 15px;
+    }
+    .roll-car img {
+        margin-right: 15px;
+    }
+    .right-side h4 {
+        margin-right: 15px;
+    }
+    .banner-content {
+        left: 9%;
+    }
+    
+}
+
+
+/* Tablet  Screen - col-sm */
+@media only screen and (min-width: 768px) and ( max-width: 991px ) {
+}
+
+
+/* col-xs - device */
+
+/* Mobile  Screen */
+@media only screen and (max-width: 767px) {
+
+    .banner-content {
+        width: 508px;
+        bottom: 48px;
+    }
+    .section-title {
+        width: 550px;
+    }
+    .contact-area .right-side {
+        margin: 0px 200px;
+    }
+    .sponsor-logo img {
+        margin: 0 auto;
+        height: 46px;
+    }
+}
+
+/* Smartphone  Screen */
+@media only screen and ( min-width: 480px ) and (max-width: 767px) {
+
+    body {
+        font-size: 2.50vw;
+    }
+    .contact-number {
+        margin-right: 29px;
+    }
+    .header-top {
+        text-align: center;
+    }
+    .social-icon.text-right {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+    .logo {
+        padding: 15px 0;
+        text-align: center;
+    }
+    .main-menu ul {
+        text-align: center;
+    }
+    .main-menu li {;
+        margin-left: 15.5px;
+    }
+    .main-menu li a {
+        font-size: 1.0em;
+        padding: 14px 0;
+    }
+    section.banner {
+        height: 350px;
+    }
+    .banner-content {
+        width: 300px;
+        bottom: 40px;
+    }
+    .banner-text h2 {
+        font-size: 1.25em;
+        text-align: center;
+    }
+    .banner-text p {
+        font-size: 1.00em;
+        text-align: center;
+    }
+    .approved-btn a {
+        padding: 6px 35px;
+        text-align: center;
+    }
+    .approved-btn {
+        width: 100%;
+    }
+    .offer-content {
+        padding: 40px 0;
+    }
+    .section-title {
+        width: 300px;
+        padding: 35px 0;
+    }
+    .single-offer img {
+        margin-bottom: 70px;
+    }
+    .single-offer img {
+        margin-bottom: 60px;
+        width: 14%;
+
+    }
+    .single-offer h4 {
+        margin-bottom: 0px;
+    }
+    .c2a-content {
+        width: 100%;
+        text-align: center;
+    }
+    a.c2a-btn {
+        margin: 0 32%;
+        text-align: center !important;
+        margin-top: 8px;
+    }
+    a.c2a-btn {
+        padding: 10px 24px;
+        right: 16px;
+    }
+    .big-text {
+        max-width: 100%;
+    }
+    .single-travel {
+        margin-bottom: 20px;
+    }
+    .single-travel {
+        margin: 12px auto;
+        width: 66%;
+    }
+    section.travel {
+        padding-bottom: 60px;
+    }
+    .trailer-qute-text {
+        width: 50%;
+        margin: 46px 0;
+    }
+    .trailer-bottom {
+        padding-top: 24%;
+    }
+    .trailer-bottom-text {
+        padding-top: 120px;
+    }
+    .trailer-bottom-text h3 {
+        font-size: 1.65em;
+    }
+    .trailer-bottom-text p {
+        margin-top: 6px;
+    }
+    .apply-attention p {
+        margin-top: 15px;
+    }
+    .apply-box {
+        max-width: 66%;
+        margin: 15px auto;
+    }
+    .apply-attention {
+        padding: 30px 0;
+    }
+    .our-roll {
+        padding-top: 30px;
+        padding-bottom: 230px;
+    }
+    .roll-car img {
+        margin: 115px 40px;
+    }
+    .rook {
+        text-align: center;
+    }
+    section.call-to-action {
+        padding-top: 60px;
+        padding-bottom: 110px;
+    }
+    section.sponsor-area {
+        padding: 22px 0;
+    }
+    .sponsor-logo img {
+        margin-right: 15px;
+        height: 46px;
+    }
+    section.contact-area {
+        text-align: center;
+    }
+    .copy-write {
+        padding: 15px 0;
+    }
+    .single-offer {
+        margin-bottom: 50px;
+    }
+    section.contact-area h4 {
+        margin-bottom: 31px;
+    }
+    section.contact-area {
+        padding-top: 40px;
+        padding-bottom: 95px;
+    }
+    .contact-area .right-side {
+        margin: 0px 126px;
+        text-align: center !important;
+    }
+}
+
+
+
+  
